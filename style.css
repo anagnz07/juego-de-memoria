@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 body {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,8 +14,7 @@ body {
     height: 100vh;
 }
 
-main{
-    font-family: sans-serif;
+main {
     font-weight: bold;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -25,18 +25,18 @@ main{
     height: 100px;
     perspective: 300px;
     margin: 2px;
-  }
-  
-  .content {
+}
+
+.content {
     position: absolute;
     width: 100%;
     height: 100%;
     transition: transform 1s;
     transform-style: preserve-3d;
-  }
-  
-  .front,
-  .back {
+}
+
+.front,
+.back {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -47,14 +47,53 @@ main{
     border-radius: 1rem;
     backface-visibility: hidden;
     user-select: none;
-  }
-  
-  .back {
+}
+
+.back {
     background: linear-gradient(steelblue, lightsteelblue);
-    transform: rotateY( 180deg );
-  }
-  
-  .card.flipped .content {
-    transform: rotateY( 180deg ) ;
+    transform: rotateY(180deg);
+}
+
+.card.flipped .content {
+    transform: rotateY(180deg);
     transition: transform 0.5s;
-  }
+}
+
+.menuPrincipal {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    width: 30%;
+    min-width: 350px;
+    height: 40%;
+    min-height: 300px;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+
+    text-align: center;
+    padding: 1rem;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);
+}
+
+.menuButton {
+    width: 35%;
+    height: 45px;
+    align-self: center;
+    border-radius: 15px;
+    background: white;
+}
