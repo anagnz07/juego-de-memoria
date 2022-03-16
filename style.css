@@ -3,3 +3,58 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+main{
+    font-family: sans-serif;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.card {
+    width: 80px;
+    height: 100px;
+    perspective: 300px;
+    margin: 2px;
+  }
+  
+  .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  
+  .front,
+  .back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(black, gray);
+    display: grid;
+    place-content: center;
+    font-size: 2rem;
+    border-radius: 1rem;
+    backface-visibility: hidden;
+    user-select: none;
+  }
+  
+  .back {
+    background: linear-gradient(steelblue, lightsteelblue);
+    transform: rotateY( 180deg );
+  }
+  
+  .card.flipped .content {
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.5s;
+  }
