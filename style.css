@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,7 +82,7 @@ main {
     background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 
     text-align: center;
-    padding: 1rem;
+    padding: 3rem;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -90,10 +92,17 @@ main {
     transform: translateY(0%);
 }
 
+.contenedor .texto h1 {
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
 .menuButton {
     width: 35%;
     height: 45px;
     align-self: center;
     border-radius: 15px;
     background: white;
+    font-weight: bold;
+    font-size: 18px;
 }
