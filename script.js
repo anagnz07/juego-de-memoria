@@ -67,6 +67,20 @@ const reveal = (e) => {
         }
     }
 };
+
 for (const card of cards) {
     card.addEventListener("click", reveal);
 }
+
+/**
+ * MODAL
+ * MENU DE INSTRUCCIONES Y START
+ */
+
+const buttonStart = document.querySelector(".buttonStart");
+const menuPrincipal = document.querySelector(".menuPrincipal");
+
+buttonStart.addEventListener("click", function (e) {
+    e.preventDefault();
+    menuPrincipal.style.visibility = "hidden";
+});
