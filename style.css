@@ -1,108 +1,117 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    place-items: center;
-    text-align: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  text-align: center;
+  height: 100vh;
+  background: #515962;
+}
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3.7rem;
 }
 
 main {
-    font-weight: bold;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 .card {
-    width: 80px;
-    height: 100px;
-    perspective: 300px;
-    margin: 2px;
+  width: 130px;
+  height: 160px;
+  perspective: 300px;
+  margin: 2px;
 }
 
 .content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
 }
 
 .front,
 .back {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(black, gray);
-    display: grid;
-    place-content: center;
-    font-size: 2rem;
-    border-radius: 1rem;
-    backface-visibility: hidden;
-    user-select: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url("https://global-uploads.webflow.com/5f3108520188e7588ef687b1/620e82ff8680cd26532fff29_Logotipo%20HACK%20A%20BOSS_white%20100%20px.svg"),
+    linear-gradient(grey, black);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  place-content: center;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  backface-visibility: hidden;
+  user-select: none;
 }
 
 .back {
-    background: linear-gradient(steelblue, lightsteelblue);
-    transform: rotateY(180deg);
+  background: linear-gradient(rgb(219, 46, 190), rgb(54, 5, 44));
+  transform: rotateY(180deg);
+  font-size: 5rem;
 }
 
 .card.flipped .content {
-    transform: rotateY(180deg);
-    transition: transform 0.5s;
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
 }
 
 .menuPrincipal {
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contenedor {
-    width: 30%;
-    min-width: 500px;
-    height: 40%;
-    min-height: 300px;
-    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-
-    text-align: center;
-    padding: 3rem;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    position: relative;
-    transition: transform 1s;
-    transform: translateY(0%);
+  width: 30%;
+  min-width: 500px;
+  height: 40%;
+  min-height: 300px;
+  background-image: linear-gradient(to top, rgb(54, 5, 44), rgb(219, 46, 190));
+  text-align: center;
+  padding: 3rem;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  transition: transform 1s;
+  transform: translateY(0%);
 }
 
 .contenedor .texto h1 {
-    margin-bottom: 10px;
-    font-size: 40px;
+  margin-bottom: 10px;
+  font-size: 40px;
 }
 
 .menuButton {
-    width: 35%;
-    height: 45px;
-    align-self: center;
-    border-radius: 15px;
-    background: white;
-    font-weight: bold;
-    font-size: 18px;
+  width: 35%;
+  height: 45px;
+  align-self: center;
+  border-radius: 40px;
+  background: rgba(231, 173, 223, 0.384);
+  font-weight: bold;
+  font-size: 18px;
 }
