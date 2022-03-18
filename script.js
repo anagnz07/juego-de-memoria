@@ -1,5 +1,5 @@
 "use strict";
-const emojis = [" 💊", " 💀", " 👻", " 👽", " 🤖", " 💣", " 🍺", " 🪰"];
+const emojis = [" 💊", " 💀", " 👻", " 👽", " 🤖", " 💣", " 🍺", "💃"];
 const main = document.querySelector("main");
 
 ///Generar cartas aleatoriamente
@@ -83,4 +83,27 @@ const menuPrincipal = document.querySelector(".menuPrincipal");
 buttonStart.addEventListener("click", function (e) {
   e.preventDefault();
   menuPrincipal.style.visibility = "hidden";
+  temporizador();
 });
+
+/**
+ * TEMPORIZADOR
+ */
+
+const tempText = document.querySelector(".temp");
+let temp = 0;
+let min = 0;
+function temporizador() {
+  setInterval(() => {
+    temp++;
+    if (temp == 59) {
+      temp = 0;
+      min++;
+    }
+    if (min == 0) {
+      tempText.textContent = `${temp}s`;
+    } else {
+      tempText.textContent = `${min}m ${temp}s`;
+    }
+  }, 1000);
+}
