@@ -133,3 +133,109 @@ main {
     font-weight: bold;
     font-size: 18px;
 }
+
+/* media querys */
+
+@media screen and (max-width:660px){
+    .card{
+        width: 100px;
+        height: 120px;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.25rem;
+    }
+}
+@media screen and (max-width:510px){
+    .card{
+        width: 100px;
+        height: 120px;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.25rem;
+    }
+    .contenedor{
+        min-height: 100px;
+        min-width: 440px;
+        
+    }
+}
+@media screen and (max-width:440px){
+    .card{
+        width: 80px;
+        height: 100px;
+    }
+    .front{
+        background-size: contain;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.25rem;
+    }
+    .contenedor{
+        min-height: 80px;
+        min-width: 400px;
+        
+    }
+}
+@media screen and (max-width:432px){
+    .card{
+        width: 80px;
+        height: 100px;
+    }
+    .back{
+        font-size: 3rem;
+    }
+    .front{
+        background-size: contain;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.25rem;
+    }
+    .contenedor{
+        min-height: 80px;
+        min-width: 380px;
+        
+    }
+    .contenedor .texto h1{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:376px){
+    .card{
+        width: 70px;
+        height: 90px;
+    }
+    .front{
+        background-size: contain;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.25rem;
+    }
+    .contenedor{
+        min-height: 80px;
+        min-width: 340px;
+        
+    }
+    .contenedor .texto h1{
+        font-size: 2rem;
+    }
+    .buttonRestart{
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+}
